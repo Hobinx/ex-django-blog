@@ -51,7 +51,7 @@ class DraftListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Post.objects.filter(
-            publiashed_date__isnull=True
+            published_date__isnull=True
         ).order_by('created_date')
 
 
